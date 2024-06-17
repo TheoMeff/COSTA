@@ -1,44 +1,43 @@
-import { useRef, useState, useEffect, useContext, useLayoutEffect } from 'react'
-import { CommandBarButton, IconButton, Dialog, DialogType, Stack } from '@fluentui/react'
-import { SquareRegular, ShieldLockRegular, ErrorCircleRegular } from '@fluentui/react-icons'
+import { CommandBarButton, Dialog, DialogType, IconButton, Stack } from '@fluentui/react'
+import { ErrorCircleRegular, ShieldLockRegular, SquareRegular } from '@fluentui/react-icons'
+import { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react'
 
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import rehypeRaw from 'rehype-raw'
-import uuid from 'react-uuid'
-import { isEmpty } from 'lodash'
 import DOMPurify from 'dompurify'
+import { isEmpty } from 'lodash'
+import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import uuid from 'react-uuid'
+import rehypeRaw from 'rehype-raw'
+import remarkGfm from 'remark-gfm'
 
-import styles from './Chat.module.css'
-import Contoso from '../../assets/Contoso.svg'
+import COSTA from '../../assets/COSTA.svg'
 import { XSSAllowTags } from '../../constants/xssAllowTags'
+import styles from './Chat.module.css'
 
+import { useBoolean } from "@fluentui/react-hooks"
 import {
-  ChatMessage,
-  ConversationRequest,
-  conversationApi,
-  Citation,
-  ToolMessageContent,
   AzureSqlServerExecResults,
-  ChatResponse,
-  getUserInfo,
-  Conversation,
-  historyGenerate,
-  historyUpdate,
-  historyClear,
   ChatHistoryLoadingState,
+  ChatMessage,
+  ChatResponse,
+  Citation,
+  Conversation,
+  ConversationRequest,
   CosmosDBStatus,
   ErrorMessage,
   ExecResults,
-  AzureSqlServerCodeExecResult
-} from "../../api";
-import { Answer } from "../../components/Answer";
-import { QuestionInput } from "../../components/QuestionInput";
-import { ChatHistoryPanel } from "../../components/ChatHistory/ChatHistoryPanel";
-import { AppStateContext } from "../../state/AppProvider";
-import { useBoolean } from "@fluentui/react-hooks";
+  ToolMessageContent,
+  conversationApi,
+  getUserInfo,
+  historyClear,
+  historyGenerate,
+  historyUpdate
+} from "../../api"
+import { Answer } from "../../components/Answer"
+import { ChatHistoryPanel } from "../../components/ChatHistory/ChatHistoryPanel"
+import { QuestionInput } from "../../components/QuestionInput"
+import { AppStateContext } from "../../state/AppProvider"
 
 const enum messageStatus {
   NotRunning = 'Not Running',
@@ -767,7 +766,7 @@ const Chat = () => {
           <div className={styles.chatContainer}>
             {!messages || messages.length < 1 ? (
               <Stack className={styles.chatEmptyState}>
-                <img src={ui?.chat_logo ? ui.chat_logo : Contoso} className={styles.chatIcon} aria-hidden="true" />
+                <img src={ui?.chat_logo ? ui.chat_logo : COSTA} className={styles.chatIcon} aria-hidden="true" />
                 <h1 className={styles.chatEmptyStateTitle}>{ui?.chat_title}</h1>
                 <h2 className={styles.chatEmptyStateSubtitle}>{ui?.chat_description}</h2>
               </Stack>
