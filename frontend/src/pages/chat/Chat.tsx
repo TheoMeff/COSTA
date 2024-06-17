@@ -11,6 +11,7 @@ import uuid from 'react-uuid'
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 
+import COSTA from '../../assets/COSTA.svg'
 import { XSSAllowTags } from '../../constants/xssAllowTags'
 import styles from './Chat.module.css'
 
@@ -905,7 +906,7 @@ const Chat = () => {
               </Stack>
               <QuestionInput
                 clearOnSend
-                placeholder="I'd like to automate..."
+                placeholder="Type a new question..."
                 disabled={isLoading}
                 onSend={(question, id) => {
                   appStateContext?.state.isCosmosDBAvailable?.cosmosDB
