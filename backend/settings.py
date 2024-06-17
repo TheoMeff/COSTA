@@ -45,7 +45,7 @@ class _UiSettings(BaseSettings):
     logo: Optional[str] = None
     chat_logo: Optional[str] = None
     chat_title: str = "Start chatting"
-    chat_description: str = "I'm COSTA, your AI assistant. I help streamline IT operations and reduce high operational costs by harnessing AI-driven automation for routine tasks."
+    chat_description: str = "I'm COSTA, your AI assistant. \n I help streamline IT operations and reduce high operational costs by harnessing AI-driven automation for routine tasks."
     favicon: str = "/favicon.ico"
     show_share_button: bool = True
 
