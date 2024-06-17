@@ -11,7 +11,6 @@ import uuid from 'react-uuid'
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 
-import COSTA from '../../assets/COSTA.svg'
 import { XSSAllowTags } from '../../constants/xssAllowTags'
 import styles from './Chat.module.css'
 
