@@ -42,10 +42,10 @@ class _UiSettings(BaseSettings):
     )
 
     title: str = "AskHR"
-    logo: Optional[str] = None
-    chat_logo: Optional[str] = None
+    logo: Optional[str] = "assets/askhrlogo.svg"
+    chat_logo: Optional[str] = "assets/askhrlogo.svg"
     chat_title: str = "Start chatting"
-    chat_description: str = "I'm AskHR Bot, your AI assistant to help with HR related questions and services."
+    chat_description: str = "I'm AskHR Bot, your Rackspace AI assistant to help with HR related questions and services."
     favicon: str = "/favicon.ico"
     show_share_button: bool = True
 
