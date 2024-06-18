@@ -41,11 +41,11 @@ class _UiSettings(BaseSettings):
         env_ignore_empty=True
     )
 
-    title: str = "COSTA"
+    title: str = "AskHR"
     logo: Optional[str] = None
     chat_logo: Optional[str] = None
     chat_title: str = "Start chatting"
-    chat_description: str = "I'm COSTA, your AI assistant to help automate tasks."
+    chat_description: str = "I'm AskHR Bot, your AI assistant to help with HR related questions and services."
     favicon: str = "/favicon.ico"
     show_share_button: bool = True
 
