@@ -41,8 +41,8 @@ class _UiSettings(BaseSettings):
         env_ignore_empty=True
     )
 
-    title: str = "AskHR"
-    logo: Optional[str] = "assets/askhrlogo.svg"
+    title: str = "Rackspace AskHR"
+    logo: Optional[str] = "assets/RXT-FAIR.svg"
     chat_logo: Optional[str] = "assets/askhrlogo.svg"
     chat_title: str = "Start chatting"
     chat_description: str = "I'm AskHR Bot, your Rackspace AI assistant to help with HR related questions and services."
