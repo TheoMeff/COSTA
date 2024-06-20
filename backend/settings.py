@@ -41,7 +41,7 @@ class _UiSettings(BaseSettings):
         env_ignore_empty=True
     )
 
-    title: str = "Rackspace AskHR"
+    title: str = "AskHR"
     logo: Optional[str] = "assets/RXT-FAIR.svg"
     chat_logo: Optional[str] = "assets/askhrlogo.svg"
     chat_title: str = "Start chatting"
